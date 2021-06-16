@@ -49,6 +49,10 @@ class Car {
       this.gas -= kms / this.kmPerLt;
     }
   }
+
+  currentSalePrice(value) {
+    return (this.price - ((this.kms / value) * this.price));
+  }
 }
 
 module.exports = Car;

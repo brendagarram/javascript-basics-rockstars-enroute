@@ -45,3 +45,10 @@ test('move car 5 kms', () => {
   golf.move(5);
   expect(golf.kms).toBe(kmBefore);
 });
+
+test('car current sale price is lower', () => {
+  const usefulLifeCar = 13;
+  const kmPerYear = 15000;
+  const totalKm = usefulLifeCar * kmPerYear;
+  expect(golf.currentSalePrice(totalKm)).toBeLessThan(golf.price);
+});
